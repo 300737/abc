@@ -5,7 +5,7 @@
 #
 # M3U Proxy v1.2.1
 #
-# 公众号【潇雨萌萌�?
+# 公众号【潇雨萌萌】
 #################################################
 
 
@@ -41,7 +41,7 @@ INSTALL_DIR="/opt/m3u-proxy-cache"
 # 设置外部访问端口
 # ===============================
 
-read -p "请输入外部访问端口（默认10002�? " OUT_PORT
+read -p "请输入外部访问端口（默认10002）: " OUT_PORT
 
 OUT_PORT=${OUT_PORT:-10002}
 
@@ -73,7 +73,7 @@ echo "
 
 =================================
 
-   M3U Proxy     修改�?
+   M3U Proxy     修改版
 
              v${VERSION}
 
@@ -139,13 +139,13 @@ echo -e "${BLUE}4)${NC} 查看日志"
 echo -e "${BLUE}5)${NC} 清理缓存"
 
 
-echo -e "${BLUE}6)${NC} 查看状�?
+echo -e "${BLUE}6)${NC} 查看状态"
 
 
 echo -e "${BLUE}7)${NC} 删除服务"
 
 
-echo -e "${RED}0)${NC} 退�?
+echo -e "${RED}0)${NC} 退出"
 
 
 echo
@@ -162,7 +162,7 @@ echo
 
 
 # ===============================
-# Docker检�?
+# Docker检测
 # ===============================
 
 
@@ -197,7 +197,7 @@ else
 
 echo -e "${GREEN}"
 
-echo "Docker 已安�?
+echo "Docker 已安装"
 
 echo -e "${NC}"
 
@@ -218,7 +218,7 @@ fi
 
 
 # ===============================
-# Compose检�?
+# Compose检测
 # ===============================
 
 
@@ -232,7 +232,7 @@ then
 
 echo -e "${GREEN}"
 
-echo "Docker Compose 已安�?
+echo "Docker Compose 已安装"
 
 echo -e "${NC}"
 
@@ -270,7 +270,7 @@ fi
 
 
 # ===============================
-# 初始化目�?
+# 初始化目录
 # ===============================
 
 
@@ -369,7 +369,7 @@ echo ${PASSWORD}
 
 
 # ===============================
-# 设置管理员账号密�?
+# 设置管理员账号密码
 # ===============================
 
 
@@ -381,13 +381,13 @@ echo
 
 echo -e "${CYAN}"
 
-echo "====== 管理员账号设�?======"
+echo "====== 管理员账号设置 ======"
 
 echo -e "${NC}"
 
 
 
-read -p "请输入管理员用户�?默认 admin): " ADMIN_USERNAME
+read -p "请输入管理员用户名(默认 admin): " ADMIN_USERNAME
 
 
 
@@ -410,7 +410,7 @@ fi
 echo
 
 
-echo "密码设置方式�?
+echo "密码设置方式："
 
 
 echo "1) 手动设置密码"
@@ -440,7 +440,7 @@ echo
 
 echo -e "${GREEN}"
 
-echo "已生成随机密�?"
+echo "已生成随机密码:"
 
 echo "${ADMIN_PASSWORD}"
 
@@ -936,7 +936,7 @@ deploy_service(){
 
 echo -e "${GREEN}"
 
-echo "开始部�?M3U Proxy v1.2.1 Cache Edition"
+echo "开始部署 M3U Proxy v1.2.1 Cache Edition"
 
 echo -e "${NC}"
 
@@ -986,7 +986,7 @@ cd ${INSTALL_DIR}
 
 echo -e "${YELLOW}"
 
-echo "停止旧容�?.."
+echo "停止旧容器..."
 
 echo -e "${NC}"
 
@@ -1060,7 +1060,7 @@ echo -e "${NC}"
 echo
 
 
-echo "后台地址�?
+echo "后台地址："
 
 echo "http://${SERVER_IP}:${PORT}/admin"
 
@@ -1069,7 +1069,7 @@ echo "http://${SERVER_IP}:${PORT}/admin"
 echo
 
 
-echo "订阅地址�?
+echo "订阅地址："
 
 echo "http://${SERVER_IP}:${PORT}/iptv.m3u"
 
@@ -1087,7 +1087,7 @@ echo "${ADMIN_USERNAME}"
 echo
 
 
-echo "密码�?
+echo "密码："
 
 echo "${ADMIN_PASSWORD}"
 
@@ -1096,7 +1096,7 @@ echo "${ADMIN_PASSWORD}"
 echo
 
 
-echo "配置文件�?
+echo "配置文件："
 
 echo "${INSTALL_DIR}/config.env"
 
@@ -1106,7 +1106,7 @@ echo
 
 
 
-read -p "按回车返回菜�?.."
+read -p "按回车返回菜单..."
 
 
 
@@ -1121,7 +1121,7 @@ update_service(){
 
 echo -e "${YELLOW}"
 
-echo "开始更新服�?.."
+echo "开始更新服务..."
 
 echo -e "${NC}"
 
@@ -1147,7 +1147,7 @@ echo -e "${NC}"
 
 
 
-read -p "按回车返回菜�?.."
+read -p "按回车返回菜单..."
 
 
 
@@ -1194,7 +1194,7 @@ echo -e "${NC}"
 
 
 
-read -p "按回车返回菜�?.."
+read -p "按回车返回菜单..."
 
 
 
@@ -1209,7 +1209,7 @@ read -p "按回车返回菜�?.."
 
 
 # ===============================
-# 查看状�?
+# 查看状态
 # ===============================
 
 
@@ -1221,7 +1221,7 @@ echo
 
 echo "=============================="
 
-echo " M3U Proxy 运行状�?
+echo " M3U Proxy 运行状态"
 
 echo "=============================="
 
@@ -1243,7 +1243,7 @@ echo
 
 
 
-echo "端口�?
+echo "端口："
 
 echo "${PORT}"
 
@@ -1253,7 +1253,7 @@ echo
 
 
 
-echo "缓存目录�?
+echo "缓存目录："
 
 du -sh ${INSTALL_DIR}/nginx-cache 2>/dev/null
 
@@ -1263,7 +1263,7 @@ echo
 
 
 
-echo "配置文件�?
+echo "配置文件："
 
 echo "${INSTALL_DIR}/config.env"
 
@@ -1273,7 +1273,7 @@ echo
 
 
 
-read -p "按回车返回菜�?.."
+read -p "按回车返回菜单..."
 
 
 
@@ -1299,7 +1299,7 @@ show_logs(){
 echo
 
 
-echo "请选择日志�?
+echo "请选择日志："
 
 
 echo
@@ -1419,7 +1419,7 @@ echo -e "${NC}"
 
 
 
-read -p "按回车返回菜�?.."
+read -p "按回车返回菜单..."
 
 
 
@@ -1450,7 +1450,7 @@ echo -e "${NC}"
 
 
 
-read -p "确认删除服务�?y/N): " confirm
+read -p "确认删除服务？(y/N): " confirm
 
 
 
@@ -1521,7 +1521,7 @@ else
 
 
 
-echo "已取�?
+echo "已取消"
 
 
 
@@ -1531,7 +1531,7 @@ fi
 
 
 
-read -p "按回车返回菜�?.."
+read -p "按回车返回菜单..."
 
 
 
@@ -1546,7 +1546,7 @@ read -p "按回车返回菜�?.."
 
 
 # ===============================
-# 主程�?
+# 主程序
 # ===============================
 
 
@@ -1683,5 +1683,4 @@ esac
 
 
 done
-
 
